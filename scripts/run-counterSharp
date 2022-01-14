@@ -63,7 +63,7 @@ exec_bench(){
 		} > $resultDir/init.log 2>&1
 
 		{
-		eval chrt -b 0 runlim -r 60 -s 2048 python3 -m counterSharp --amm $resultDir/amm-$1.smt2 --amh $resultDir/amh-$1.smt2 --asm $resultDir/asm-$1.smt2 --ash $resultDir/ash-$1.smt2 --con $resultDir/con-$1.smt2 -d $2 $inputFile
+		eval chrt -b 0 runlim -r 60 -s 2048 python3 -m counterSharp --smt2 --amm $resultDir/amm-$1.smt2 --amh $resultDir/amh-$1.smt2 --asm $resultDir/asm-$1.smt2 --ash $resultDir/ash-$1.smt2 --con $resultDir/con-$1.smt2 -d $2 $inputFile
 		} > $resultDir/stdout.log 2> $resultDir/stderr.log
 
 		cp $resultDir/* $outputDir
